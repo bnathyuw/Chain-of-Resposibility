@@ -2,7 +2,7 @@ using Console.CoinChecks;
 
 namespace Console.CoinIdentifiers
 {
-	internal class RealCoinIdentifier : ICoinIdentifier
+	public class RealCoinIdentifier : ICoinIdentifier
 	{
 		private readonly double _expectedMass;
 		private readonly string _value;

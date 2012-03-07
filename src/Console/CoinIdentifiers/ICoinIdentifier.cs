@@ -1,6 +1,6 @@
 namespace Console.CoinIdentifiers
 {
-	internal interface ICoinIdentifier
+	public interface ICoinIdentifier
 	{
 		ICoin Identify(CoinInput coinInput);
 	}

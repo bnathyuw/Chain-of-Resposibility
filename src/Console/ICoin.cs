@@ -1,6 +1,6 @@
 namespace Console
 {
-	internal interface ICoin
+	public interface ICoin
 	{
 		string Value { get; set; }
 	}

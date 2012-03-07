@@ -52,16 +52,11 @@
     <Compile Include="StructureMap\DependencyResolver.cs" />
     <Compile Include="CoinIdentifiers\FakeCoinIdentifier.cs" />
     <Compile Include="CoinIdentifiers\RealCoinIdentifier.cs" />
-    <Compile Include="CoinIdentifiers\FivePenceIdentifier.cs" />
     <Compile Include="ICoin.cs" />
     <Compile Include="CoinIdentifiers\ICoinIdentifier.cs" />
     <Compile Include="ICoinSorter.cs" />
-    <Compile Include="CoinIdentifiers\OnePennyIdentifier.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="CoinIdentifiers\TenPenceIdentifier.cs" />
-    <Compile Include="CoinIdentifiers\TwentyPenceIdentifier.cs" />
-    <Compile Include="CoinIdentifiers\TwoPenceIdentifier.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
