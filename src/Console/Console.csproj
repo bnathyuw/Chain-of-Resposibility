@@ -42,9 +42,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Coin.cs" />
+    <Compile Include="CoinChecks\CoinWeightCheck.cs" />
     <Compile Include="CoinChecks\ICoinCheck.cs" />
     <Compile Include="CoinInput.cs" />
     <Compile Include="CoinSorter.cs" />
+    <Compile Include="StructureMap\CoinCheckRegistry.cs" />
+    <Compile Include="StructureMap\CoinIdentifierRegistry.cs" />
+    <Compile Include="StructureMap\CoinSorterRegistry.cs" />
     <Compile Include="StructureMap\DependencyResolver.cs" />
     <Compile Include="CoinIdentifiers\FakeCoinIdentifier.cs" />
     <Compile Include="CoinIdentifiers\FiftyPenceIdentifier.cs" />
