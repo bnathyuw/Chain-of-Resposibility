@@ -2,21 +2,18 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{A28EC8D8-0C3D-4999-A3C4-FFD365370D40}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{1E67842C-4ACA-4F94-B829-3FBBA90CDD4F}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Console</RootNamespace>
-    <AssemblyName>Console</AssemblyName>
+    <RootNamespace>Unit.Tests</RootNamespace>
+    <AssemblyName>Unit.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>
-    </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
-    <PlatformTarget>x86</PlatformTarget>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -25,8 +22,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
-    <PlatformTarget>x86</PlatformTarget>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -35,32 +31,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="StructureMap">
-      <HintPath>..\..\lib\StructureMap.dll</HintPath>
-    </Reference>
+    <Reference Include="nunit.framework, Version=2.5.10.11092, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL" />
+    <Reference Include="System" />
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Coin.cs" />
-    <Compile Include="CoinChecks\ICoinCheck.cs" />
-    <Compile Include="CoinInput.cs" />
-    <Compile Include="CoinSorter.cs" />
-    <Compile Include="StructureMap\DependencyResolver.cs" />
-    <Compile Include="CoinIdentifiers\FakeCoinIdentifier.cs" />
-    <Compile Include="CoinIdentifiers\FiftyPenceIdentifier.cs" />
-    <Compile Include="CoinIdentifiers\FivePenceIdentifier.cs" />
-    <Compile Include="ICoin.cs" />
-    <Compile Include="CoinIdentifiers\ICoinIdentifier.cs" />
-    <Compile Include="ICoinSorter.cs" />
-    <Compile Include="CoinIdentifiers\OnePennyIdentifier.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="CoinWeightCheckTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="CoinIdentifiers\TenPenceIdentifier.cs" />
-    <Compile Include="CoinIdentifiers\TwentyPenceIdentifier.cs" />
-    <Compile Include="CoinIdentifiers\TwoPenceIdentifier.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
+    <ProjectReference Include="..\src\Console\Console.csproj">
+      <Project>{A28EC8D8-0C3D-4999-A3C4-FFD365370D40}</Project>
+      <Name>Console</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,4 +1,5 @@
 using System;
+using Console.CoinChecks;
 
 namespace Console.CoinIdentifiers
 {
@@ -7,13 +8,17 @@ namespace Console.CoinIdentifiers
 		private const double EXPECTED_MASS = 5;
 		private const string COIN_VALUE = "20p";
 		private readonly ICoinIdentifier _successor;
+		private readonly ICoinCheck _coinCheck;
 
-		public TwentyPenceIdentifier(ICoinIdentifier successor) {
+		public TwentyPenceIdentifier(ICoinIdentifier successor, ICoinCheck coinCheck) {
 			_successor = successor;
+			_coinCheck = coinCheck;
 		}
 
 		public ICoin Identify(CoinInput coinInput) {
-			return Math.Abs((coinInput.Mass - EXPECTED_MASS) / EXPECTED_MASS) < 0.01 ? new Coin { Value = COIN_VALUE } : _successor.Identify(coinInput);
+			return _coinCheck.CheckCoin(coinInput, new CoinInput{Mass = EXPECTED_MASS}) 
+				? new Coin { Value = COIN_VALUE }
+				: _successor.Identify(coinInput);
 		}
 	}
 }

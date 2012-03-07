@@ -1,3 +1,4 @@
+using Console.CoinChecks;
 using Console.CoinIdentifiers;
 using StructureMap;
 using StructureMap.Configuration.DSL;
@@ -16,7 +17,7 @@ namespace Console.StructureMap
 		private static void Configure(ConfigurationExpression x) {
 			x.AddRegistry<CoinSorterRegistry>();
 			x.AddRegistry<CoinIdentifierRegistry>();
-			
+			x.AddRegistry<CoinCheckRegistry>();
 		}
 	}
 
@@ -33,6 +34,13 @@ namespace Console.StructureMap
 			For<ICoinIdentifier>().Add<FiftyPenceIdentifier>().Named("FiftyPence").Ctor<ICoinIdentifier>().Is(x => x.GetInstance<ICoinIdentifier>("TwentyPence"));
 			For<ICoinIdentifier>().Add<TwentyPenceIdentifier>().Named("TwentyPence").Ctor<ICoinIdentifier>().Is(x => x.GetInstance<ICoinIdentifier>("Fake"));
 			For<ICoinIdentifier>().Add<FakeCoinIdentifier>().Named("Fake");
+		}
+	}
+
+	internal class CoinCheckRegistry:Registry
+	{
+		public CoinCheckRegistry() {
+			For<ICoinCheck>().Use<CoinWeightCheck>();
 		}
 	}
 }
