@@ -44,7 +44,7 @@
     <Compile Include="RealCoinIdentifierTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\src\Console\Console.csproj">
+    <ProjectReference Include="..\Console\Console.csproj">
       <Project>{A28EC8D8-0C3D-4999-A3C4-FFD365370D40}</Project>
       <Name>Console</Name>
     </ProjectReference>
