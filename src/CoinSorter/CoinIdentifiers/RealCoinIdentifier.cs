@@ -1,7 +1,7 @@
-using Console.CoinChecks;
-using Console.Coins;
+using CoinSorter.CoinChecks;
+using CoinSorter.Coins;
 
-namespace Console.CoinIdentifiers
+namespace CoinSorter.CoinIdentifiers
 {
 	public class RealCoinIdentifier : ICoinIdentifier
 	{

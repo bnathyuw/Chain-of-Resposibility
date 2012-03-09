@@ -1,6 +1,6 @@
 using StructureMap;
 
-namespace Console.StructureMap
+namespace CoinSorter.StructureMap
 {
 	static public class DependencyResolver {
 		public static IContainer Container {

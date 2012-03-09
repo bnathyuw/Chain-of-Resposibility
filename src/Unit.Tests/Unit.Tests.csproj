@@ -46,9 +46,9 @@
     <Compile Include="RealCoinIdentifierTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Console\Console.csproj">
-      <Project>{A28EC8D8-0C3D-4999-A3C4-FFD365370D40}</Project>
-      <Name>Console</Name>
+    <ProjectReference Include="..\CoinSorter\CoinSorter.csproj">
+      <Project>{B3E9F111-5D06-4D41-A916-9BF94C367A6D}</Project>
+      <Name>CoinSorter</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

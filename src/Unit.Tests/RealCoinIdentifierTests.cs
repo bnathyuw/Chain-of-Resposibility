@@ -1,8 +1,7 @@
 ﻿using System;
-using Console;
-using Console.CoinChecks;
-using Console.CoinIdentifiers;
-using Console.Coins;
+using CoinSorter.CoinChecks;
+using CoinSorter.CoinIdentifiers;
+using CoinSorter.Coins;
 using NUnit.Framework;
 using Rhino.Mocks;
 

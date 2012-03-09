@@ -1,8 +1,8 @@
-using Console.CoinIdentifiers;
-using Console.Coins;
+using CoinSorter.CoinIdentifiers;
+using CoinSorter.Coins;
 using StructureMap.Configuration.DSL;
 
-namespace Console.StructureMap
+namespace CoinSorter.StructureMap
 {
 	internal class CoinIdentifierRegistry:Registry
 	{

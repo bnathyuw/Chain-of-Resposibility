@@ -1,6 +1,6 @@
-﻿using Console.CoinSorter;
-using Console.Coins;
-using Console.StructureMap;
+﻿using CoinSorter.CoinSorter;
+using CoinSorter.Coins;
+using CoinSorter.StructureMap;
 using Con = System.Console;
 
 namespace Console

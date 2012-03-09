@@ -1,6 +1,6 @@
-﻿using Console;
-using Console.CoinSorter;
-using Console.Coins;
+﻿using CoinSorter.CoinSorter;
+using CoinSorter.Coins;
+using CoinSorter.StructureMap;
 using NUnit.Framework;
 using StructureMap;
 
@@ -12,7 +12,7 @@ namespace Acceptance.Tests {
 
 		[TestFixtureSetUp]
 		public void TestFixtureSetUp() {
-			_container = Console.StructureMap.DependencyResolver.Container;
+			_container = DependencyResolver.Container;
 			_coinSorter = _container.GetInstance<ICoinSorter>();
 		}
 

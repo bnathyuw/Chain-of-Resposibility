@@ -1,5 +1,4 @@
-﻿using Console;
-using Console.StructureMap;
+﻿using CoinSorter.StructureMap;
 using NUnit.Framework;
 
 namespace Integration.Tests

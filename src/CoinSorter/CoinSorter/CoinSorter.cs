@@ -1,7 +1,7 @@
-using Console.CoinIdentifiers;
-using Console.Coins;
+using CoinSorter.CoinIdentifiers;
+using CoinSorter.Coins;
 
-namespace Console.CoinSorter
+namespace CoinSorter.CoinSorter
 {
 	internal class CoinSorter : ICoinSorter
 	{

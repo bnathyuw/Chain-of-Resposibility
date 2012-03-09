@@ -1,7 +1,7 @@
-using Console.CoinChecks;
+using CoinSorter.CoinChecks;
 using StructureMap.Configuration.DSL;
 
-namespace Console.StructureMap
+namespace CoinSorter.StructureMap
 {
 	internal class CoinCheckRegistry:Registry
 	{

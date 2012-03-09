@@ -1,6 +1,6 @@
-﻿using Console.Coins;
+﻿using CoinSorter.Coins;
 
-namespace Console.CoinChecks
+namespace CoinSorter.CoinChecks
 {
 	public interface ICoinCheck
 	{

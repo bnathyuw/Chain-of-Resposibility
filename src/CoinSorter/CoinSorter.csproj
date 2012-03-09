@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{80B17E18-56C1-4346-BF7C-37890BD185F3}</ProjectGuid>
+    <ProjectGuid>{B3E9F111-5D06-4D41-A916-9BF94C367A6D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Acceptance.Tests</RootNamespace>
-    <AssemblyName>Acceptance.Tests</AssemblyName>
+    <RootNamespace>CoinSorter</RootNamespace>
+    <AssemblyName>CoinSorter</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,7 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="nunit.framework, Version=2.5.10.11092, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL" />
     <Reference Include="StructureMap">
       <HintPath>..\..\lib\StructureMap.dll</HintPath>
     </Reference>
@@ -39,14 +38,23 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Tests.cs" />
+    <Compile Include="CoinChecks\CoinDiameterCheck.cs" />
+    <Compile Include="CoinChecks\CoinMassCheck.cs" />
+    <Compile Include="CoinChecks\ICoinCheck.cs" />
+    <Compile Include="CoinChecks\PassCoinCheck.cs" />
+    <Compile Include="CoinIdentifiers\FakeCoinIdentifier.cs" />
+    <Compile Include="CoinIdentifiers\ICoinIdentifier.cs" />
+    <Compile Include="CoinIdentifiers\RealCoinIdentifier.cs" />
+    <Compile Include="CoinSorter\CoinSorter.cs" />
+    <Compile Include="CoinSorter\ICoinSorter.cs" />
+    <Compile Include="Coins\Coin.cs" />
+    <Compile Include="Coins\CoinInput.cs" />
+    <Compile Include="Coins\ICoin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CoinSorter\CoinSorter.csproj">
-      <Project>{B3E9F111-5D06-4D41-A916-9BF94C367A6D}</Project>
-      <Name>CoinSorter</Name>
-    </ProjectReference>
+    <Compile Include="StructureMap\CoinCheckRegistry.cs" />
+    <Compile Include="StructureMap\CoinIdentifierRegistry.cs" />
+    <Compile Include="StructureMap\CoinSorterRegistry.cs" />
+    <Compile Include="StructureMap\DependencyResolver.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,6 +1,6 @@
-using Console.Coins;
+using CoinSorter.Coins;
 
-namespace Console.CoinIdentifiers
+namespace CoinSorter.CoinIdentifiers
 {
 	public interface ICoinIdentifier
 	{
