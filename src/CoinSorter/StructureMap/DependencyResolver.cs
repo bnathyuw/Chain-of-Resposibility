@@ -7,8 +7,7 @@ namespace CoinSorter.StructureMap
 		public static IContainer Container {
 			get {
 				ObjectFactory.Configure(Configure);
-				IContainer container = ObjectFactory.Container;
-				return container;
+				return ObjectFactory.Container;
 			}
 		}
 

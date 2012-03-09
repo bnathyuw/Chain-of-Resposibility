@@ -14,7 +14,6 @@ namespace CoinSorter.CoinIdentifiers
 			_coinSpec = coinSpec;
 			_successor = successor;
 			_coinCheck = coinCheck;
-
 			_value = value;
 		}
 
