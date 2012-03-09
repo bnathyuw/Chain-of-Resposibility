@@ -6,22 +6,22 @@ using Rhino.Mocks;
 namespace Unit.Tests
 {
 	[TestFixture]
-	public class CoinSorterTests
+	public class SorterTests
 	{
-		private CoinSorter.CoinSorter _coinSorter;
+		private CoinSorter.Sorter _sorter;
 		private ICoinIdentifier _coinIdentifier;
 
 		[SetUp]
 		public void SetUp() {
 			_coinIdentifier = MockRepository.GenerateStub<ICoinIdentifier>();
-			_coinSorter = new CoinSorter.CoinSorter(_coinIdentifier);
+			_sorter = new CoinSorter.Sorter(_coinIdentifier);
 		}
 
 		[Test]
 		public void Calls_coin_identifier() {
 			var coinInput = new CoinInput();
 			
-			_coinSorter.Sort(coinInput);
+			_sorter.Sort(coinInput);
 
 			_coinIdentifier.AssertWasCalled(i => i.Identify(coinInput));
 		}
@@ -32,7 +32,7 @@ namespace Unit.Tests
 			var coin = new Coin();
 			_coinIdentifier.Stub(i => i.Identify(coinInput)).Return(coin);
 
-			var result = _coinSorter.Sort(coinInput);
+			var result = _sorter.Sort(coinInput);
 
 			Assert.That(result, Is.EqualTo(coin));
 		}

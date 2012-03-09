@@ -41,7 +41,7 @@
   <ItemGroup>
     <Compile Include="CoinDiameterCheckTests.cs" />
     <Compile Include="CoinMassCheckTests.cs" />
-    <Compile Include="CoinSorterTests.cs" />
+    <Compile Include="SorterTests.cs" />
     <Compile Include="FakeCoinIdentifierTests.cs" />
     <Compile Include="PassCoinCheckTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

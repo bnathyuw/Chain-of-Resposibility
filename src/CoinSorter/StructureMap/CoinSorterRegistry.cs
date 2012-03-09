@@ -6,7 +6,7 @@ namespace CoinSorter.StructureMap
 	internal class CoinSorterRegistry:Registry
 	{
 		public CoinSorterRegistry() {
-			For<ICoinSorter>().Use<CoinSorter>().Ctor<ICoinIdentifier>().Is(x => x.GetInstance<ICoinIdentifier>());
+			For<ISorter>().Use<Sorter>().Ctor<ICoinIdentifier>().Is(x => x.GetInstance<ICoinIdentifier>());
 		}
 	}
 }

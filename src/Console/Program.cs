@@ -7,11 +7,11 @@ namespace Console
 {
 	internal static class Program
 	{
-		private static readonly ICoinSorter _coinSorter;
+		private static readonly ISorter _sorter;
 
 		static Program() {
 			var container = DependencyResolver.Container;
-			_coinSorter = container.GetInstance<ICoinSorter>();
+			_sorter = container.GetInstance<ISorter>();
 		}
 
 		private static void Main() {
@@ -20,7 +20,7 @@ namespace Console
 				var diameter = ReadCoinDiameter();
 				var coinInput = new CoinInput {Mass = mass, Diameter = diameter};
 
-				var coin = _coinSorter.Sort(coinInput);
+				var coin = _sorter.Sort(coinInput);
 
 				Con.WriteLine("You have entered a {0} coin", coin.Value);
 

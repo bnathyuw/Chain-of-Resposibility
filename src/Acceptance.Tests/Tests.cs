@@ -8,17 +8,17 @@ namespace Acceptance.Tests {
 	[TestFixture]
 	public class Tests {
 		private IContainer _container;
-		private ICoinSorter _coinSorter;
+		private ISorter _sorter;
 
 		[TestFixtureSetUp]
 		public void TestFixtureSetUp() {
 			_container = DependencyResolver.Container;
-			_coinSorter = _container.GetInstance<ICoinSorter>();
+			_sorter = _container.GetInstance<ISorter>();
 		}
 
 		[Test]
 		public void Correctly_identifies_fifty_pence() {
-			var result = _coinSorter.Sort(CoinInput.FiftyPence());
+			var result = _sorter.Sort(CoinInput.FiftyPence());
 
 			Assert.That(result.Value, Is.EqualTo("50p"));
 		}
@@ -28,7 +28,7 @@ namespace Acceptance.Tests {
 			var coin = CoinInput.FiftyPence();
 			coin.Mass = coin.Mass*0.999;
 
-			var result = _coinSorter.Sort(coin);
+			var result = _sorter.Sort(coin);
 
 			Assert.That(result.Value, Is.EqualTo("50p"));
 		}
@@ -38,7 +38,7 @@ namespace Acceptance.Tests {
 			var coin = CoinInput.FiftyPence();
 			coin.Mass = 1000;
 
-			var result = _coinSorter.Sort(coin);
+			var result = _sorter.Sort(coin);
 
 			Assert.That(result.Value, Is.EqualTo("fake"));
 		}

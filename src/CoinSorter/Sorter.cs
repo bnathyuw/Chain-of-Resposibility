@@ -3,11 +3,11 @@ using CoinSorter.Coins;
 
 namespace CoinSorter
 {
-	public class CoinSorter : ICoinSorter
+	public class Sorter : ISorter
 	{
 		private readonly ICoinIdentifier _coinIdentifier;
 
-		public CoinSorter(ICoinIdentifier coinIdentifier) {
+		public Sorter(ICoinIdentifier coinIdentifier) {
 			_coinIdentifier = coinIdentifier;
 		}
 
