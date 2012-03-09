@@ -16,8 +16,9 @@ namespace Console
 
 		private static void Main() {
 			while (true) {
-				var weight = ReadCoinMass();
-				var coinInput = new CoinInput {Mass = weight};
+				var mass = ReadCoinMass();
+				var diameter = ReadCoinDiameter();
+				var coinInput = new CoinInput {Mass = mass, Diameter = diameter};
 
 				var coin = _coinSorter.Sort(coinInput);
 
@@ -26,6 +27,17 @@ namespace Console
 				if (!ReadContinue()) return;
 				Con.WriteLine();
 			}
+		}
+
+		private static double ReadCoinDiameter() {
+			Con.WriteLine("Enter coin diameter");
+			var diameterString = Con.ReadLine();
+			double diameter;
+			while (!double.TryParse(diameterString, out diameter)) {
+				Con.WriteLine("Say that again?");
+				diameterString = Con.ReadLine();
+			}
+			return diameter;
 		}
 
 		private static bool ReadContinue() {
