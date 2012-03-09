@@ -11,7 +11,7 @@ namespace CoinSorter
 			_coinIdentifier = coinIdentifier;
 		}
 
-		public ICoin Sort(CoinInput coinInput) {
+		public Coin Sort(CoinInput coinInput) {
 			return _coinIdentifier.Identify(coinInput);
 		}
 	}

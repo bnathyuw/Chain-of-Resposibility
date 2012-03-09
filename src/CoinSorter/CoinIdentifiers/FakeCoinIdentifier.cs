@@ -4,7 +4,7 @@ namespace CoinSorter.CoinIdentifiers
 {
 	public class FakeCoinIdentifier:ICoinIdentifier
 	{
-		public ICoin Identify(CoinInput coinInput) {
+		public Coin Identify(CoinInput coinInput) {
 			return new Coin {Value = "fake"};
 		}
 	}

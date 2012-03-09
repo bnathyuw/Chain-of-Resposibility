@@ -18,7 +18,7 @@ namespace CoinSorter.CoinIdentifiers
 			_value = value;
 		}
 
-		public ICoin Identify(CoinInput coinInput) {
+		public Coin Identify(CoinInput coinInput) {
 			return _coinCheck.CheckCoin(coinInput, _coinSpec) 
 				? new Coin { Value = _value }
 				: _successor.Identify(coinInput);

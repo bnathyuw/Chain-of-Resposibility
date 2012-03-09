@@ -4,6 +4,6 @@ namespace CoinSorter.CoinIdentifiers
 {
 	public interface ICoinIdentifier
 	{
-		ICoin Identify(CoinInput coinInput);
+		Coin Identify(CoinInput coinInput);
 	}
 }

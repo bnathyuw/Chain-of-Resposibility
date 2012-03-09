@@ -4,6 +4,6 @@ namespace CoinSorter
 {
 	public interface ISorter
 	{
-		ICoin Sort(CoinInput coinInput);
+		Coin Sort(CoinInput coinInput);
 	}
 }

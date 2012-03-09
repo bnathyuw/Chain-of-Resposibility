@@ -49,7 +49,6 @@
     <Compile Include="ISorter.cs" />
     <Compile Include="Coins\Coin.cs" />
     <Compile Include="Coins\CoinInput.cs" />
-    <Compile Include="Coins\ICoin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StructureMap\CoinCheckRegistry.cs" />
     <Compile Include="StructureMap\CoinIdentifierRegistry.cs" />
