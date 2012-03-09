@@ -4,9 +4,11 @@ using CoinSorter.StructureMap;
 using NUnit.Framework;
 using StructureMap;
 
-namespace Acceptance.Tests {
+namespace Acceptance.Tests
+{
 	[TestFixture]
-	public class Tests {
+	public class Tests
+	{
 		private IContainer _container;
 		private ISorter _sorter;
 
@@ -17,30 +19,30 @@ namespace Acceptance.Tests {
 		}
 
 		[Test]
+		public void Correctly_idenfies_fake_coin() {
+			CoinInput coin = CoinInput.FiftyPence();
+			coin.Mass = 1000;
+
+			Coin result = _sorter.Sort(coin);
+
+			Assert.That(result.Value, Is.EqualTo("fake"));
+		}
+
+		[Test]
 		public void Correctly_identifies_fifty_pence() {
-			var result = _sorter.Sort(CoinInput.FiftyPence());
+			Coin result = _sorter.Sort(CoinInput.FiftyPence());
 
 			Assert.That(result.Value, Is.EqualTo("50p"));
 		}
 
 		[Test]
 		public void Correctly_identifies_slighty_worn_fifty_pence() {
-			var coin = CoinInput.FiftyPence();
+			CoinInput coin = CoinInput.FiftyPence();
 			coin.Mass = coin.Mass*0.999;
 
-			var result = _sorter.Sort(coin);
+			Coin result = _sorter.Sort(coin);
 
 			Assert.That(result.Value, Is.EqualTo("50p"));
-		}
-
-		[Test]
-		public void Correctly_idenfies_fake_coin() {
-			var coin = CoinInput.FiftyPence();
-			coin.Mass = 1000;
-
-			var result = _sorter.Sort(coin);
-
-			Assert.That(result.Value, Is.EqualTo("fake"));
 		}
 	}
 }

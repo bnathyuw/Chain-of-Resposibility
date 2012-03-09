@@ -16,7 +16,7 @@ namespace Unit.Tests
 
 		[Test]
 		public void Always_returns_fake() {
-			var result = _fakeCoinIdentifier.Identify(new CoinInput());
+			Coin result = _fakeCoinIdentifier.Identify(new CoinInput());
 
 			Assert.That(result.Value, Is.EqualTo("fake"));
 		}

@@ -1,5 +1,6 @@
 ﻿using CoinSorter.StructureMap;
 using NUnit.Framework;
+using StructureMap;
 
 namespace Integration.Tests
 {
@@ -8,7 +9,7 @@ namespace Integration.Tests
 	{
 		[Test]
 		public void ConfigurationIsValid() {
-			var container = DependencyResolver.Container;
+			IContainer container = DependencyResolver.Container;
 			container.AssertConfigurationIsValid();
 		}
 	}

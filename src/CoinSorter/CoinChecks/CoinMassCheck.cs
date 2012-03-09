@@ -6,6 +6,7 @@ namespace CoinSorter.CoinChecks
 	public class CoinMassCheck : ICoinCheck
 	{
 		private readonly ICoinCheck _successor;
+
 		public CoinMassCheck(ICoinCheck successor) {
 			_successor = successor;
 		}

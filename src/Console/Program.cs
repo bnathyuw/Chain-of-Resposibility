@@ -1,6 +1,8 @@
-﻿using CoinSorter;
+﻿using System;
+using CoinSorter;
 using CoinSorter.Coins;
 using CoinSorter.StructureMap;
+using StructureMap;
 using Con = System.Console;
 
 namespace Console
@@ -10,28 +12,30 @@ namespace Console
 		private static readonly ISorter _sorter;
 
 		static Program() {
-			var container = DependencyResolver.Container;
+			IContainer container = DependencyResolver.Container;
 			_sorter = container.GetInstance<ISorter>();
 		}
 
 		private static void Main() {
 			while (true) {
-				var mass = ReadCoinMass();
-				var diameter = ReadCoinDiameter();
+				double mass = ReadCoinMass();
+				double diameter = ReadCoinDiameter();
 				var coinInput = new CoinInput {Mass = mass, Diameter = diameter};
 
-				var coin = _sorter.Sort(coinInput);
+				Coin coin = _sorter.Sort(coinInput);
 
 				Con.WriteLine("You have entered a {0} coin", coin.Value);
 
-				if (!ReadContinue()) return;
+				if (!ReadContinue()) {
+					return;
+				}
 				Con.WriteLine();
 			}
 		}
 
 		private static double ReadCoinDiameter() {
 			Con.WriteLine("Enter coin diameter");
-			var diameterString = Con.ReadLine();
+			string diameterString = Con.ReadLine();
 			double diameter;
 			while (!double.TryParse(diameterString, out diameter)) {
 				Con.WriteLine("Say that again?");
@@ -42,7 +46,7 @@ namespace Console
 
 		private static bool ReadContinue() {
 			Con.WriteLine("Play again? y/n");
-			var key = Con.ReadKey();
+			ConsoleKeyInfo key = Con.ReadKey();
 			while (key.KeyChar != 'y' && key.KeyChar != 'n') {
 				Con.WriteLine("Say that again?");
 				key = Con.ReadKey();
@@ -52,7 +56,7 @@ namespace Console
 
 		private static double ReadCoinMass() {
 			Con.WriteLine("Enter coin mass");
-			var massString = Con.ReadLine();
+			string massString = Con.ReadLine();
 			double mass;
 			while (!double.TryParse(massString, out mass)) {
 				Con.WriteLine("Say that again?");

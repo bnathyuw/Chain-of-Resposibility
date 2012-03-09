@@ -3,9 +3,10 @@ using CoinSorter.Coins;
 
 namespace CoinSorter.CoinChecks
 {
-	public class CoinDiameterCheck:ICoinCheck
+	public class CoinDiameterCheck : ICoinCheck
 	{
 		private readonly ICoinCheck _successor;
+
 		public CoinDiameterCheck(ICoinCheck successor) {
 			_successor = successor;
 		}

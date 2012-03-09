@@ -2,11 +2,12 @@ using StructureMap;
 
 namespace CoinSorter.StructureMap
 {
-	static public class DependencyResolver {
+	public static class DependencyResolver
+	{
 		public static IContainer Container {
 			get {
 				ObjectFactory.Configure(Configure);
-				var container = ObjectFactory.Container;
+				IContainer container = ObjectFactory.Container;
 				return container;
 			}
 		}
