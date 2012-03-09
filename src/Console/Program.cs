@@ -1,4 +1,6 @@
-﻿using Console.StructureMap;
+﻿using Console.CoinSorter;
+using Console.Coins;
+using Console.StructureMap;
 using Con = System.Console;
 
 namespace Console

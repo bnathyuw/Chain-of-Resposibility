@@ -1,4 +1,6 @@
-﻿namespace Console.CoinChecks
+﻿using Console.Coins;
+
+namespace Console.CoinChecks
 {
 	public interface ICoinCheck
 	{

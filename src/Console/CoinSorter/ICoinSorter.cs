@@ -1,4 +1,6 @@
-namespace Console
+using Console.Coins;
+
+namespace Console.CoinSorter
 {
 	public interface ICoinSorter
 	{

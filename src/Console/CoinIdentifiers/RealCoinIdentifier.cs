@@ -1,4 +1,5 @@
 using Console.CoinChecks;
+using Console.Coins;
 
 namespace Console.CoinIdentifiers
 {

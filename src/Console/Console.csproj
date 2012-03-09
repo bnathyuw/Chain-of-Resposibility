@@ -41,22 +41,22 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Coin.cs" />
+    <Compile Include="Coins\Coin.cs" />
     <Compile Include="CoinChecks\CoinDiameterCheck.cs" />
     <Compile Include="CoinChecks\CoinMassCheck.cs" />
     <Compile Include="CoinChecks\PassCoinCheck.cs" />
     <Compile Include="CoinChecks\ICoinCheck.cs" />
-    <Compile Include="CoinInput.cs" />
-    <Compile Include="CoinSorter.cs" />
+    <Compile Include="Coins\CoinInput.cs" />
+    <Compile Include="CoinSorter\CoinSorter.cs" />
     <Compile Include="StructureMap\CoinCheckRegistry.cs" />
     <Compile Include="StructureMap\CoinIdentifierRegistry.cs" />
     <Compile Include="StructureMap\CoinSorterRegistry.cs" />
     <Compile Include="StructureMap\DependencyResolver.cs" />
     <Compile Include="CoinIdentifiers\FakeCoinIdentifier.cs" />
     <Compile Include="CoinIdentifiers\RealCoinIdentifier.cs" />
-    <Compile Include="ICoin.cs" />
+    <Compile Include="Coins\ICoin.cs" />
     <Compile Include="CoinIdentifiers\ICoinIdentifier.cs" />
-    <Compile Include="ICoinSorter.cs" />
+    <Compile Include="CoinSorter\ICoinSorter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

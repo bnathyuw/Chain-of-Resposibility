@@ -1,3 +1,5 @@
+using Console.Coins;
+
 namespace Console.CoinIdentifiers
 {
 	internal class FakeCoinIdentifier:ICoinIdentifier

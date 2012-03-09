@@ -1,6 +1,7 @@
 using Console.CoinIdentifiers;
+using Console.Coins;
 
-namespace Console
+namespace Console.CoinSorter
 {
 	internal class CoinSorter : ICoinSorter
 	{

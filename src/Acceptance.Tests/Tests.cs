@@ -1,4 +1,6 @@
 ﻿using Console;
+using Console.CoinSorter;
+using Console.Coins;
 using NUnit.Framework;
 using StructureMap;
 

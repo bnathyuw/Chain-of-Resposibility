@@ -1,5 +1,6 @@
 ﻿using Console;
 using Console.CoinChecks;
+using Console.Coins;
 using NUnit.Framework;
 
 namespace Unit.Tests

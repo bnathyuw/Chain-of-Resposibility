@@ -1,4 +1,5 @@
 using Console.CoinIdentifiers;
+using Console.Coins;
 using StructureMap.Configuration.DSL;
 
 namespace Console.StructureMap

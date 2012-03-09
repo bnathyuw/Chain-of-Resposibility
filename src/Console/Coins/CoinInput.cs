@@ -1,4 +1,4 @@
-namespace Console
+namespace Console.Coins
 {
 	public class CoinInput
 	{

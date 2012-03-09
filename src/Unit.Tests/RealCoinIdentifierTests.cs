@@ -2,6 +2,7 @@
 using Console;
 using Console.CoinChecks;
 using Console.CoinIdentifiers;
+using Console.Coins;
 using NUnit.Framework;
 using Rhino.Mocks;
 
