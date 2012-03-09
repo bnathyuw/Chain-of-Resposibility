@@ -1,4 +1,4 @@
-﻿using CoinSorter.CoinSorter;
+﻿using CoinSorter;
 using CoinSorter.Coins;
 using CoinSorter.StructureMap;
 using Con = System.Console;
