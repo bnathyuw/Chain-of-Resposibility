@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 
-[assembly : AssemblyTitle("Sorter")]
+[assembly : AssemblyTitle("CoinSorter")]
 [assembly : AssemblyDescription("")]
 [assembly : AssemblyConfiguration("")]
 [assembly : AssemblyCompany("7digital")]
-[assembly : AssemblyProduct("Sorter")]
+[assembly : AssemblyProduct("CoinSorter")]
 [assembly : AssemblyCopyright("Copyright © 7digital 2012")]
 [assembly : AssemblyTrademark("")]
 [assembly : AssemblyCulture("")]
