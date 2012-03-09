@@ -1,6 +1,6 @@
 namespace Console
 {
-	internal interface ICoinSorter
+	public interface ICoinSorter
 	{
 		ICoin Sort(CoinInput coinInput);
 	}

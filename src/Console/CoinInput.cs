@@ -2,6 +2,7 @@ namespace Console
 {
 	public class CoinInput
 	{
+		public double Diameter { get; set; }
 		public double Mass { get; set; }
 
 		public static CoinInput OnePenny() {

@@ -42,7 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Coin.cs" />
-    <Compile Include="CoinChecks\CoinWeightCheck.cs" />
+    <Compile Include="CoinChecks\CoinDiameterCheck.cs" />
+    <Compile Include="CoinChecks\CoinMassCheck.cs" />
+    <Compile Include="CoinChecks\PassCoinCheck.cs" />
     <Compile Include="CoinChecks\ICoinCheck.cs" />
     <Compile Include="CoinInput.cs" />
     <Compile Include="CoinSorter.cs" />

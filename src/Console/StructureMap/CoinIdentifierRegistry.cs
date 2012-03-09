@@ -6,7 +6,7 @@ namespace Console.StructureMap
 	internal class CoinIdentifierRegistry:Registry
 	{
 		public CoinIdentifierRegistry() {
-			For<ICoinIdentifier>().Add<RealCoinIdentifier>().Named("FiftyPence")
+			For<ICoinIdentifier>().Use<RealCoinIdentifier>()
 				.Ctor<ICoinIdentifier>().Is(x => x.GetInstance<ICoinIdentifier>("TwentyPence"))
 				.Ctor<CoinInput>("coinSpec").Is(CoinInput.FiftyPence())
 				.Ctor<string>("value").Is("50p");
