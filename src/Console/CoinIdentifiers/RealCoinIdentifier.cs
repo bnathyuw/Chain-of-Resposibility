@@ -9,7 +9,7 @@ namespace Console.CoinIdentifiers
 		private readonly ICoinIdentifier _successor;
 		private readonly ICoinCheck _coinCheck;
 
-		public RealCoinIdentifier(CoinInput coinSpec, ICoinIdentifier successor, ICoinCheck coinCheck, string value) {
+		public RealCoinIdentifier(ICoinIdentifier successor, ICoinCheck coinCheck, CoinInput coinSpec, string value) {
 			_coinSpec = coinSpec;
 			_successor = successor;
 			_coinCheck = coinCheck;

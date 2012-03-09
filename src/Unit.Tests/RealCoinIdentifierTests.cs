@@ -22,7 +22,7 @@ namespace Unit.Tests
 			_coinCheck = MockRepository.GenerateStub<ICoinCheck>();
 			_expectedMass = 10;
 			_value = "One florin";
-			_realCoinIdentifier = new RealCoinIdentifier(new CoinInput{Mass = _expectedMass}, _successor, _coinCheck, _value);
+			_realCoinIdentifier = new RealCoinIdentifier(_successor, _coinCheck, new CoinInput{Mass = _expectedMass}, _value);
 		}
 
 		[Test]
